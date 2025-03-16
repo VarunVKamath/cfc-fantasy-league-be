@@ -152,58 +152,106 @@ def generate_points():
     total_time_taken = f"{int((end - begin) / 60)}m {round((end - begin) % 60, 3)}s"
     return jsonify({"message": "Excel file saved successfully", "file_path": file_path, "runtime": total_time_taken})
 
+# @app.route('/last-match-and-overall-points', methods=['GET'])
+# def last_match_and_overall_points():
+#     match_urls = list(match_objects.keys())
+#     last_match_url = match_urls[-1]
+#     match_object = match_objects[last_match_url]
+#     match_name = last_match_url.split('/')[-2].title().replace('Vs', 'vs')
+
+#     for ipl_team in team_names_ff:
+#         if ipl_team in match_name:
+#             match_name = match_name.replace(ipl_team, team_names_sf[team_names_ff.index(ipl_team)])
+
+#     match = Match(teams, match_object)
+#     team_breakdown = match.match_points_breakdown
+
+#     overall_points = {}
+
+#     # Accumulate total points across all matches
+#     for match_url in match_urls:
+#         match_object = match_objects[match_url]
+#         match = Match(teams, match_object)
+#         team_breakdown = match.match_points_breakdown
+
+#         for team in list(team_breakdown.index):
+#             if team not in overall_points:
+#                 overall_points[team] = {"Total Points": 0}
+#             overall_points[team]["Total Points"] += int(team_breakdown.loc[team, 'Total Points'])
+
+
+#     tb = pd.DataFrame(team_breakdown)
+#     json_result = filter_participant_data(tb, teams)
+
+    
+#     # json_result_new = tb.T.to_dict()
+            
+
+#     return jsonify({
+#         "last_match": match_name,
+#         "last_match_points":json_result,
+#         "overall_points": overall_points,
+#         "entire_team_details":entire_team_details
+#     })
+
+# def filter_participant_data(df, teams):
+#     filtered_data = {}
+
+#     for participant, players in teams.items():
+#         if participant in df.index:
+#             filtered_data[participant] = {
+#                 player: df.loc[participant, player] for player in players if player in df.columns
+#             }
+
+#     return filtered_data
+
+
 @app.route('/last-match-and-overall-points', methods=['GET'])
 def last_match_and_overall_points():
     match_urls = list(match_objects.keys())
     last_match_url = match_urls[-1]
-    match_object = match_objects[last_match_url]
+    last_match_object = match_objects[last_match_url]
+
+    # Format the last match name efficiently
     match_name = last_match_url.split('/')[-2].title().replace('Vs', 'vs')
+    team_name_map = dict(zip(team_names_ff, team_names_sf))
+    for ff_name, sf_name in team_name_map.items():
+        match_name = match_name.replace(ff_name, sf_name)
 
-    for ipl_team in team_names_ff:
-        if ipl_team in match_name:
-            match_name = match_name.replace(ipl_team, team_names_sf[team_names_ff.index(ipl_team)])
+    # Get last match breakdown
+    last_match = Match(teams, last_match_object)
+    team_breakdown = last_match.match_points_breakdown
 
-    match = Match(teams, match_object)
-    team_breakdown = match.match_points_breakdown
-
+    # Calculate overall points across all matches
     overall_points = {}
-
-    # Accumulate total points across all matches
     for match_url in match_urls:
-        match_object = match_objects[match_url]
-        match = Match(teams, match_object)
-        team_breakdown = match.match_points_breakdown
+        match = Match(teams, match_objects[match_url])
+        match_breakdown = match.match_points_breakdown
 
-        for team in list(team_breakdown.index):
-            if team not in overall_points:
-                overall_points[team] = {"Total Points": 0}
-            overall_points[team]["Total Points"] += int(team_breakdown.loc[team, 'Total Points'])
+        for team in match_breakdown.index:
+            overall_points.setdefault(team, {"Total Points": 0})
+            overall_points[team]["Total Points"] += int(match_breakdown.loc[team, 'Total Points'])
 
-
-    tb = pd.DataFrame(team_breakdown)
-    json_result = filter_participant_data(tb, teams)
-
-    
-    # json_result_new = tb.T.to_dict()
-            
+    # Convert DataFrame to JSON
+    json_result = filter_participant_data(team_breakdown, teams)
 
     return jsonify({
         "last_match": match_name,
-        "last_match_points":json_result,
+        "last_match_points": json_result,
         "overall_points": overall_points,
-        "entire_team_details":entire_team_details
+        "entire_team_details": entire_team_details
     })
 
+
 def filter_participant_data(df, teams):
-    filtered_data = {}
+    return {
+        participant: {
+            player: df.loc[participant, player]
+            for player in players if player in df.columns
+        }
+        for participant, players in teams.items() if participant in df.index
+    }
 
-    for participant, players in teams.items():
-        if participant in df.index:
-            filtered_data[participant] = {
-                player: df.loc[participant, player] for player in players if player in df.columns
-            }
-
-    return filtered_data
 
 # Convert to JSON format
 
