@@ -37,8 +37,8 @@ entire_team_details={
             "C. Bosch", "Siraj", "Prasidh", "Stoinis", "H. Brar",
             "Gurbaz", "R. Khan", "Sundar"
         ],
-        "captain": "Faf",
-        "vice_captain": "R. Pant"
+        "captain": "NA",
+        "vice_captain": "NA"
     },
     "Hilarious Hooligans (KARAM)": {
         "players": [
@@ -49,8 +49,8 @@ entire_team_details={
             "A. Nortje", "M. Markande", "Y. Chahal", "T. Deshpande", "N. Ahmad",
             "H. Klaasen", "K. Rabada", "M. Jansen"
         ],
-        "captain": "H. Pandya",
-        "vice_captain": "Y. Jaiswal"
+        "captain": "NA",
+        "vice_captain": "NA"
     },
     "Tormented Titans (Aryan)": {
         "players": [
@@ -60,8 +60,8 @@ entire_team_details={
             "V.Kohli", "Ramandeep Singh", "S. Rutherford", "G.Maxwell", "Sandeep Sharma",
             "SKY", "S. Joseph", "P. Cummins", "QDK", "Ashwin"
         ],
-        "captain": "V. Kohli",
-        "vice_captain": "G. Maxwell"
+        "captain": "NA",
+        "vice_captain": "NA"
     },
     "La Furia Roja (Abhinav)": {
         "players": [
@@ -72,8 +72,8 @@ entire_team_details={
             "J. Bumrah", "S. Iyer", "Spencer Johnson", "Overton", "Shashank",
             "R. Powell", "Suryansh Shedge", "Theekshana"
         ],
-        "captain": "M. S. Dhoni",
-        "vice_captain": "J. Bumrah"
+        "captain": "NA",
+        "vice_captain": "NA"
     },
     "Supa Jinx Strikas (Varun)": {
         "players": [
@@ -83,8 +83,8 @@ entire_team_details={
             "G. Phillips", "Tim David", "R. Bishnoi", "D. Ferreira", "J. Yadav",
             "T. Boult", "J. Archer", "A. Madhwal", "D. Nalkande", "K. Maphaka"
         ],
-        "captain": "S. Gill",
-        "vice_captain": "I. Kishan"
+        "captain": "NA",
+        "vice_captain": "NA"
     },
     "Raging Raptors (Aditya)": {
         "players": [
@@ -94,8 +94,8 @@ entire_team_details={
             "M. Starc", "Arshdeep Singh", "Samson", "Buttler", "A. Taide",
             "Musheer", "D. Conway", "Venky Iyer"
         ],
-        "captain": "R. Jadeja",
-        "vice_captain": "KL Rahul"
+        "captain": "NA",
+        "vice_captain": "NA"
     },
     "The Traveling Bankers (Aakash)": {
         "players": [
@@ -105,8 +105,8 @@ entire_team_details={
             "JFM", "Curran", "R. Sharma", "Mujeeb", "Russell",
             "S. Narine", "Anshul Kamboj", "Lomror"
         ],
-        "captain": "R. Sharma",
-        "vice_captain": "S. Narine"
+        "vice_captain": "Russell",
+        "captain": "S. Narine"
     }
 }
 
