@@ -37,8 +37,8 @@ entire_team_details = {
             "Corbin Bosch", "Mohammed Siraj", "Prasidh Krishna", "Marcus Stoinis", "Harpreet Brar", 
             "Rahmanullah Gurbaz", "Rashid Khan", "Washington Sundar"
         ],
-        "captain": "Faf Du Plessis",
-        "vice_captain": "Rishabh Pant"
+        "captain": "NA",
+        "vice_captain": "NA",
     },
     "Hilarious Hooligans (KARAM)": {
         "players": [
@@ -83,8 +83,8 @@ entire_team_details = {
             "Glenn Phillips", "Tim David", "Ravi Bishnoi", "Donovan Ferreira", "Jayant Yadav", 
             "Trent Boult", "Jofra Archer", "Akash Madhwal", "Darshan Nalkande", "Kwena Maphaka"
         ],
-       "captain": "NA",
-        "vice_captain": "NA"
+       "captain": "Shubman Gill",
+        "vice_captain": "Ruturaj Gaikwad"
     },
     "Raging Raptors (Aditya)": {
         "players": [
