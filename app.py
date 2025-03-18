@@ -27,86 +27,86 @@ match_objects = ipl2024.match_objects
 #     # 'Participant8': ['Sanju Samson', 'Yuzvendra Chahal', 'Mark Wood', 'Pat Cummins']
 # }
 
-entire_team_details={
+entire_team_details = {
     "Gujju Gang (Nisarg)": {
         "players": [
-            "T. Head", "R. Chahar", "M. Chaudhary", "H. Rana", "Ishant Sharma",
-            "Unadkat", "M.Kumar", "A Samad", "R Parag", "K. Ahmed",
-            "Avesh Khan", "Faf", "Arjun Tendulkar", "M. Shami", "S. Dube",
-            "V. Chakravarthy", "L. Ferguson", "Hazlewood", "P. Singh", "R. Pant",
-            "C. Bosch", "Siraj", "Prasidh", "Stoinis", "H. Brar",
-            "Gurbaz", "R. Khan", "Sundar"
+            "Travis Head", "Varun Chakaravarthy", "Rahul Chahar", "Mukesh Choudhary", "Harshit Rana", 
+            "Ishant Sharma", "Jaydev Unadkat", "Mukesh Kumar", "Abdul Samad", "Riyan Parag", 
+            "Khaleel Ahmed", "Avesh Khan", "Faf Du Plessis", "Arjun Tendulkar", "Mohammed Shami", 
+            "Shivam Dube", "Lockie Ferguson", "Josh Hazlewood", "Prabhsimran Singh", "Rishabh Pant", 
+            "Corbin Bosch", "Mohammed Siraj", "Prasidh Krishna", "Marcus Stoinis", "Harpreet Brar", 
+            "Rahmanullah Gurbaz", "Rashid Khan", "Washington Sundar"
         ],
-        "captain": "Faf",
-        "vice_captain": "R. Pant"
+        "captain": "Faf Du Plessis",
+        "vice_captain": "Rishabh Pant"
     },
     "Hilarious Hooligans (KARAM)": {
         "players": [
-            "Rinku", "N.Wadehra", "R. Shepherd", "M. Suthar", "Vijaykumar Vyshak",
-            "Himmat Singh", "A. Badoni", "Liam Livingstone", "H. Pandya", "N. Ellis",
-            "M. Ali", "K. Sharma", "Y. Jaiswal", "S. Hetmyer", "A. Patel",
-            "Mayank Yadav", "A. Manohar", "Ashutosh Sharma", "R. Ravindra", "SRK",
-            "A. Nortje", "M. Markande", "Y. Chahal", "T. Deshpande", "N. Ahmad",
-            "H. Klaasen", "K. Rabada", "M. Jansen"
+            "Hardik Pandya", "Heinrich Klaasen", "Rinku Singh", "Nehal Wadhera", "Romario Shepherd", 
+            "Manav Suthar", "Vijaykumar Vyshak", "Himmat Singh", "Ayush Badoni", "Liam Livingstone", 
+            "Nathan Ellis", "Moeen Ali", "Karn Sharma", "Yashasvi Jaiswal", "Shimron Hetmyer", 
+            "Axar Patel", "Mayank Yadav", "Abhinav Manohar", "Ashutosh Sharma", "Rachin Ravindra", 
+            "Shahrukh Khan", "Anrich Nortje", "Mayank Markande", "Yuzvendra Chahal", "Tushar Deshpande", 
+            "Noor Ahmad", "Kagiso Rabada", "Marco Jansen"
         ],
-        "captain": "H. Pandya",
-        "vice_captain": "Y. Jaiswal"
+       "captain": "NA",
+        "vice_captain": "NA"
     },
     "Tormented Titans (Aryan)": {
         "players": [
-            "Jitesh Sharma", "Harnoor Singh", "Bhuvneshwar Kumar", "A. Porel",
-            "Angkrish Raghuvanshi", "K.Yadav", "D Jurel", "D. Miller", "A. Rawat",
-            "J. Inglis", "K. Kartikeya", "Akash Deep", "R. Tewatia", "Abhishek Sharma",
-            "V.Kohli", "Ramandeep Singh", "S. Rutherford", "G.Maxwell", "Sandeep Sharma",
-            "SKY", "S. Joseph", "P. Cummins", "QDK", "Ashwin"
+            "Virat Kohli", "Abhishek Sharma", "Jitesh Sharma", "Harnoor Singh", "Bhuvneshwar Kumar", 
+            "Abhishek Porel", "Angkrish Raghuvanshi", "Kuldeep Yadav", "David Miller", "Anuj Rawat", 
+            "Josh Inglis", "Kumar Kartikeya", "Akash Deep", "Rahul Tewatia", "Ramandeep Singh", 
+            "Sherfane Rutherford", "Glenn Maxwell", "Sandeep Sharma", "Suryakumar Yadav", "Shamar Joseph", 
+            "Pat Cummins", "Quinton de Kock", "Ravichandran Ashwin"
         ],
-        "captain": "V. Kohli",
-        "vice_captain": "G. Maxwell"
+        "captain": "NA",
+        "vice_captain": "NA"
     },
     "La Furia Roja (Abhinav)": {
         "players": [
-            "Swastik Chikara", "Sai Sudarshan", "Hangargekar", "Manoj Bhandage",
-            "Nitish Rana", "Rasikh Salam", "Deepak Chahar", "M. S. Dhoni", "A. Hardie",
-            "Priyansh Arya", "Phil Salt", "Sameer Rizvi", "M. Santner", "M. Pandey",
-            "Suyash Sharma", "Nagarkoti", "W. Jacks", "A. Omarzai", "A. Zampa",
-            "J. Bumrah", "S. Iyer", "Spencer Johnson", "Overton", "Shashank",
-            "R. Powell", "Suryansh Shedge", "Theekshana"
+            "Jasprit Bumrah", "Sai Sudharsan", "Shreyas Iyer", "Swastik Chikara", "Rajvardhan Hangargekar", 
+            "Manoj Bhandage", "Nitish Rana", "Rasikh Salam Dar", "Deepak Chahar", "MS Dhoni", 
+            "Aaron Hardie", "Priyansh Arya", "Phil Salt", "Sameer Rizvi", "Mitchell Santner", 
+            "Manish Pandey", "Suyash Sharma", "Kamlesh Nagarkoti", "Will Jacks", "Azmatullah Omarzai", 
+            "Adam Zampa", "Spencer Johnson", "Jamie Overton", "Shashank Singh", "Rovman Powell", 
+            "Suryansh Shedge", "Maheesh Theekshana"
         ],
-        "captain": "M. S. Dhoni",
-        "vice_captain": "J. Bumrah"
+       "captain": "NA",
+        "vice_captain": "NA"
     },
     "Supa Jinx Strikas (Varun)": {
         "players": [
-            "M. Sharma", "R. Sai Kishore", "Raj Angad Bawa", "I.Kishan",
-            "S.Gill", "M.Marsh", "NKR", "Karim Janat", "Y. Dayal", "R. Gaikwad",
-            "B. Jacobs", "R. Rickleton", "R. Patidar", "T. Stubbs", "Coetzee",
-            "G. Phillips", "Tim David", "R. Bishnoi", "D. Ferreira", "J. Yadav",
-            "T. Boult", "J. Archer", "A. Madhwal", "D. Nalkande", "K. Maphaka"
+            "Ruturaj Gaikwad", "Shubman Gill", "Mohit Sharma", "Sai Kishore", "Raj Bawa", 
+            "Ishan Kishan", "Mitchell Marsh", "Nitish Kumar Reddy", "Karim Janat", "Yash Dayal", 
+            "Bevon Jacobs", "Ryan Rickleton", "Rajat Patidar", "Tristan Stubbs", "Gerald Coetzee", 
+            "Glenn Phillips", "Tim David", "Ravi Bishnoi", "Donovan Ferreira", "Jayant Yadav", 
+            "Trent Boult", "Jofra Archer", "Akash Madhwal", "Darshan Nalkande", "Kwena Maphaka"
         ],
-        "captain": "S. Gill",
-        "vice_captain": "I. Kishan"
+       "captain": "NA",
+        "vice_captain": "NA"
     },
     "Raging Raptors (Aditya)": {
         "players": [
-            "Markram", "Sachin Baby", "Chameera", "Naman Dhir", "Karun Nair",
-            "Wanindu Hasaranga", "Arshad Khan", "Devdutt Paddikal", "R.Minz",
-            "Shahbaz Ahmed", "Mohsin Khan", "Krunal Pandya", "KL Rahul", "R. Jadeja",
-            "M. Starc", "Arshdeep Singh", "Samson", "Buttler", "A. Taide",
-            "Musheer", "D. Conway", "Venky Iyer"
+            "KL Rahul", "Arshdeep Singh", "Aiden Markram", "Sachin Baby", "Dushmantha Chameera", 
+            "Naman Dhir", "Karun Nair", "Wanindu Hasaranga", "Arshad Khan", "Devdutt Paddikal", 
+            "Robin Minz", "Shahbaz Ahmed", "Mohsin Khan", "Krunal Pandya", "Ravindra Jadeja", 
+            "Mitchell Starc", "Sanju Samson", "Jos Buttler", "Atharva Taide", "Musheer Khan", 
+            "Devon Conway", "Venkatesh Iyer"
         ],
-        "captain": "R. Jadeja",
-        "vice_captain": "KL Rahul"
+       "captain": "NA",
+        "vice_captain": "NA"
     },
     "The Traveling Bankers (Aakash)": {
         "players": [
-            "U.Malik", "T. Natarajan", "A. Rahane", "Shreyas Gopal", "Tilak Varma",
-            "V.Shankar", "S. Dubey", "A. Roy", "D. Hooda", "H. Patel",
-            "R. Tripathi", "Ngidi", "Pathirana", "V Arora", "N. Pooran",
-            "JFM", "Curran", "R. Sharma", "Mujeeb", "Russell",
-            "S. Narine", "Anshul Kamboj", "Lomror"
+            "Andre Russell", "Sunil Narine", "Umran Malik", "T Natarajan", "Ajinkya Rahane", 
+            "Shreyas Gopal", "Tilak Varma", "Vijay Shankar", "Shubham Dubey", "Anukul Roy", 
+            "Deepak Hooda", "Harshal Patel", "Rahul Tripathi", "Lungi Ngidi", "Matheesha Pathirana", 
+            "Vaibhav Arora", "Nicholas Pooran", "Jake Fraser-McGurk", "Sam Curran", "Rohit Sharma", 
+            "Mujeeb Ur Rahman", "Anshul Kamboj", "Mahipal Lomror"
         ],
-        "captain": "R. Sharma",
-        "vice_captain": "S. Narine"
+        "vice_captain": "Andre Russell",
+        "captain": "Sunil Narine"
     }
 }
 
@@ -152,58 +152,106 @@ def generate_points():
     total_time_taken = f"{int((end - begin) / 60)}m {round((end - begin) % 60, 3)}s"
     return jsonify({"message": "Excel file saved successfully", "file_path": file_path, "runtime": total_time_taken})
 
+# @app.route('/last-match-and-overall-points', methods=['GET'])
+# def last_match_and_overall_points():
+#     match_urls = list(match_objects.keys())
+#     last_match_url = match_urls[-1]
+#     match_object = match_objects[last_match_url]
+#     match_name = last_match_url.split('/')[-2].title().replace('Vs', 'vs')
+
+#     for ipl_team in team_names_ff:
+#         if ipl_team in match_name:
+#             match_name = match_name.replace(ipl_team, team_names_sf[team_names_ff.index(ipl_team)])
+
+#     match = Match(teams, match_object)
+#     team_breakdown = match.match_points_breakdown
+
+#     overall_points = {}
+
+#     # Accumulate total points across all matches
+#     for match_url in match_urls:
+#         match_object = match_objects[match_url]
+#         match = Match(teams, match_object)
+#         team_breakdown = match.match_points_breakdown
+
+#         for team in list(team_breakdown.index):
+#             if team not in overall_points:
+#                 overall_points[team] = {"Total Points": 0}
+#             overall_points[team]["Total Points"] += int(team_breakdown.loc[team, 'Total Points'])
+
+
+#     tb = pd.DataFrame(team_breakdown)
+#     json_result = filter_participant_data(tb, teams)
+
+    
+#     # json_result_new = tb.T.to_dict()
+            
+
+#     return jsonify({
+#         "last_match": match_name,
+#         "last_match_points":json_result,
+#         "overall_points": overall_points,
+#         "entire_team_details":entire_team_details
+#     })
+
+# def filter_participant_data(df, teams):
+#     filtered_data = {}
+
+#     for participant, players in teams.items():
+#         if participant in df.index:
+#             filtered_data[participant] = {
+#                 player: df.loc[participant, player] for player in players if player in df.columns
+#             }
+
+#     return filtered_data
+
+
 @app.route('/last-match-and-overall-points', methods=['GET'])
 def last_match_and_overall_points():
     match_urls = list(match_objects.keys())
     last_match_url = match_urls[-1]
-    match_object = match_objects[last_match_url]
+    last_match_object = match_objects[last_match_url]
+
+    # Format the last match name efficiently
     match_name = last_match_url.split('/')[-2].title().replace('Vs', 'vs')
+    team_name_map = dict(zip(team_names_ff, team_names_sf))
+    for ff_name, sf_name in team_name_map.items():
+        match_name = match_name.replace(ff_name, sf_name)
 
-    for ipl_team in team_names_ff:
-        if ipl_team in match_name:
-            match_name = match_name.replace(ipl_team, team_names_sf[team_names_ff.index(ipl_team)])
+    # Get last match breakdown
+    last_match = Match(teams, last_match_object)
+    team_breakdown = last_match.match_points_breakdown
 
-    match = Match(teams, match_object)
-    team_breakdown = match.match_points_breakdown
-
+    # Calculate overall points across all matches
     overall_points = {}
-
-    # Accumulate total points across all matches
     for match_url in match_urls:
-        match_object = match_objects[match_url]
-        match = Match(teams, match_object)
-        team_breakdown = match.match_points_breakdown
+        match = Match(teams, match_objects[match_url])
+        match_breakdown = match.match_points_breakdown
 
-        for team in list(team_breakdown.index):
-            if team not in overall_points:
-                overall_points[team] = {"Total Points": 0}
-            overall_points[team]["Total Points"] += int(team_breakdown.loc[team, 'Total Points'])
+        for team in match_breakdown.index:
+            overall_points.setdefault(team, {"Total Points": 0})
+            overall_points[team]["Total Points"] += int(match_breakdown.loc[team, 'Total Points'])
 
-
-    tb = pd.DataFrame(team_breakdown)
-    json_result = filter_participant_data(tb, teams)
-
-    
-    # json_result_new = tb.T.to_dict()
-            
+    # Convert DataFrame to JSON
+    json_result = filter_participant_data(team_breakdown, teams)
 
     return jsonify({
         "last_match": match_name,
-        "last_match_points":json_result,
+        "last_match_points": json_result,
         "overall_points": overall_points,
-        "entire_team_details":entire_team_details
+        "entire_team_details": entire_team_details
     })
 
+
 def filter_participant_data(df, teams):
-    filtered_data = {}
+    return {
+        participant: {
+            player: df.loc[participant, player]
+            for player in players if player in df.columns
+        }
+        for participant, players in teams.items() if participant in df.index
+    }
 
-    for participant, players in teams.items():
-        if participant in df.index:
-            filtered_data[participant] = {
-                player: df.loc[participant, player] for player in players if player in df.columns
-            }
-
-    return filtered_data
 
 # Convert to JSON format
 

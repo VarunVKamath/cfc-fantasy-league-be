@@ -1,10 +1,4 @@
-Go into the Final Output.py file\
-Change the teams according to how you want it.\
-Change the links of the espncricinfo and cricbuzz schedule pages.\
-Save the file, then just run it.\
-Ooh and before you run it, just make sure you have all modules installed on your laptop, along with python itself.\
-Download python first, then pip install a,b,c one by one.
-
-Now run the file!\
-BOOM, you now have what you need
-
+1. Download Python from the web onto your laptop
+2. Edit team names and team composition in Output.py and save the file. Change the links of the espncricinfo and cricbuzz schedule pages. Save the file.
+3. Run Button.py. Make sure when you run the file, you're inside the directory(cd Fantasy-Points-Automation).
+4. BOOM, you now have what you need

@@ -172,11 +172,7 @@ def find_full_name(team,short_name):
                 for part in parts:
                     if part not in short_name:
                         count += 1
-                # if short_name == 'Mahendra Singh Dhoni':
-                #     print(player,parts,short_name,count)
                 if count == 0:
-                    #print("Success",player)
-                    #team_copy.append(player)
                     return player
                 
 
@@ -275,11 +271,6 @@ def dismissals_final_generator(ipl_url,game_number):
         if (full_name := find_full_name(players[team], name)) is not None]
     except:
         pass
-
-    # Step 4: Display results
-    #print("Catchers:", mapped_catchers)
-    #print("Stumpers:", mapped_stumpers)
-    #print("Runouters:", mapped_runouters)
 
     return players,mapped_catchers,mapped_stumpers,mapped_main_runouters, mapped_secondary_runouters, mapped_bowled, mapped_lbw
 
@@ -470,14 +461,6 @@ class Score:
         print("Winner: ",self.winner)
         print()
         print("Man of the Match: ",self.man_of_the_match)
-
-
-#url = "https://www.espncricinfo.com/series/indian-premier-league-2024-1410320/kolkata-knight-riders-vs-sunrisers-hyderabad-final-1426312/full-scorecard"
-# url = "https://www.espncricinfo.com/series/indian-premier-league-2024-1410320/rajasthan-royals-vs-royal-challengers-bengaluru-eliminator-1426310/full-scorecard"
-# #ipl24 = "https://www.espncricinfo.com/series/indian-premier-league-2024-1410320/match-schedule-fixtures-and-results"
-# cricbuzz_page_link = "https://www.cricbuzz.com/cricket-series/7607/indian-premier-league-2024/matches"
-# match1 = Score(url,cricbuzz_page_link)
-# match1.printing_scorecard()
         
 class Series:
     def __init__(self,url,cricbuzz_page_link):
@@ -502,7 +485,7 @@ class Series:
                         url = match_object.url
                         #match_number = match_number_generator(url)
                         match_objects[url] = match_object
-                        print("Match updated:",url)
+                        print(" :",url)
                     except:
                         print("Match Number",match,"Abandoned")
             if len(list(match_objects.keys())) == len(match_links):
@@ -548,63 +531,8 @@ class Series:
                 pass
         return match_links
     
-    # def TeamLinks(self):
-    #     #ds-text-compact-s ds-font-bold ds-text-typo ds-underline ds-decoration-ui-stroke hover:ds-text-typo-primary hover:ds-decoration-ui-stroke-primary ds-block
-    #     headers = {
-    #         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
-    #     }
-    #     url = "https://www.espncricinfo.com/series/ipl-2025-1449924/squads"
-    #     response = requests.get(url, headers=headers)
-    #     soupteams = BeautifulSoup(response.content, "html.parser")
-    #     teamtable = soupteams.find('div',class_="ds-mb-4")
-    #     teams = teamtable.find_all('a')
-    #     player_list = {}
-    #     team_links = {}
-    #     for team in teams:
-    #         team_name = team['title'].strip().split(' Squad')[0]
-    #         player_list[team_name] = []
-    #         team_links[team_name] = "https://www.espncricinfo.com" + team['href']
-    #         for key in team_links.keys():
-    #             team_url = team_links[key]
-    #             response2 = requests.get(team_url,headers=headers)
-    #             soupplayers = BeautifulSoup(response2.content,"html.parser")
-    #             players= soupplayers.find_all('div',class_="ds-flex ds-flex-row ds-items-center ds-justify-between")
-    #             for player in players:
-    #                 player_name = player.text.strip()
-    #                 if "†" in player_name:
-    #                     player_name = player_name.split('†')[0]
-    #                 if "(c)" in player_name:
-    #                     player_name = player_name.split('(c)')[0]
-    #                 if player_name in player_list[key]:
-    #                     break
-    #                 player_list[key].append(player_name)
-    #     return player_list,team_links
-if __name__ == "__main__":
-    # cricbuzz_page_link = "https://www.cricbuzz.com/cricket-series/7607/indian-premier-league-2024/matches" 
-    # match_link = "https://www.espncricinfo.com/series/indian-premier-league-2024-1410320/sunrisers-hyderabad-vs-punjab-kings-69th-match-1426307/full-scorecard"
-    # match = Score(match_link,cricbuzz_page_link)
-    # match.printing_scorecard()          
-
-
+if __name__ == "__main__":  
     cricbuzz_page_link = "https://www.cricbuzz.com/cricket-series/7607/indian-premier-league-2024/matches"   
     ipl24_url = "https://www.espncricinfo.com/series/indian-premier-league-2024-1410320/match-schedule-fixtures-and-results"
     ipl2024 = Series(ipl24_url,cricbuzz_page_link)
-    print(len(ipl2024.match_objects))
-
-    #cricbuzz_page_link = "https://www.cricbuzz.com/cricket-series/9237/indian-premier-league-2025/matches"   
-    #ipl25_url = "https://www.espncricinfo.com/series/ipl-2025-1449924/match-schedule-fixtures-and-results"
-    # ipl2025 = Series(ipl25_url,cricbuzz_page_link)
-    # print(ipl2025.match_links)
-    # print(len(ipl2025.match_links))     
-
-    # dill.settings['recurse'] = True  # Ensure proper unpickling of nested object
-
-    # #Save list of objects to a file
-    # with open("ipl2024matches.pkl", "wb") as file:
-    #     dill.dump(ipl2024, file)
-
-    # print("Players list saved successfully!")
-
-    # print(ipl2024.match_objects)
-
 
