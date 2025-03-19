@@ -72,8 +72,8 @@ entire_team_details = {
             "Adam Zampa", "Spencer Johnson", "Jamie Overton", "Shashank Singh", "Rovman Powell", 
             "Suryansh Shedge", "Maheesh Theekshana"
         ],
-       "captain": "NA",
-        "vice_captain": "NA"
+     "captain": "Shreyas Iyer",
+        "vice_captain": "Sai Sudharsan"
     },
     "Supa Jinx Strikas (Varun)": {
         "players": [
@@ -94,8 +94,8 @@ entire_team_details = {
             "Mitchell Starc", "Sanju Samson", "Jos Buttler", "Atharva Taide", "Musheer Khan", 
             "Devon Conway", "Venkatesh Iyer"
         ],
-       "captain": "NA",
-        "vice_captain": "NA"
+       "captain": "KL Rahul",
+        "vice_captain": "Venkatesh Iyer"
     },
     "The Traveling Bankers (Aakash)": {
         "players": [
@@ -106,7 +106,11 @@ entire_team_details = {
             "Mujeeb Ur Rahman", "Anshul Kamboj", "Mahipal Lomror"
         ],
         "vice_captain": "Andre Russell",
-        "captain": "Sunil Narine"
+        "captain": "Sunil Narine",
+        "injured": ["Umran Malik"],
+        "replacements": ["Chetan Sakariya"],
+        "team_owner": "Aakash",
+        "team_color": "#2E86C1"
     }
 }
 
