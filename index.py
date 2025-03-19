@@ -72,8 +72,8 @@ entire_team_details = {
             "Adam Zampa", "Spencer Johnson", "Jamie Overton", "Shashank Singh", "Rovman Powell", 
             "Suryansh Shedge", "Maheesh Theekshana"
         ],
-       "captain": "NA",
-        "vice_captain": "NA"
+       "captain": "Shreyas Iyer",
+        "vice_captain": "Sai Sudharsan"
     },
     "Supa Jinx Strikas (Varun)": {
         "players": [
