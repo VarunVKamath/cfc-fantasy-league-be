@@ -94,8 +94,8 @@ entire_team_details = {
             "Mitchell Starc", "Sanju Samson", "Jos Buttler", "Atharva Taide", "Musheer Khan", 
             "Devon Conway", "Venkatesh Iyer"
         ],
-       "captain": "NA",
-        "vice_captain": "NA"
+       "captain": "KL Rahul",
+        "vice_captain": "Venkatesh Iyer"
     },
     "The Traveling Bankers (Aakash)": {
         "players": [
