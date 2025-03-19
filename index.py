@@ -26,8 +26,7 @@ match_objects = ipl2024.match_objects
 #     # 'Participant7': ['Shubman Gill', 'Jos Buttler', 'Andre Russell', 'Jofra Archer'],
 #     # 'Participant8': ['Sanju Samson', 'Yuzvendra Chahal', 'Mark Wood', 'Pat Cummins']
 # }
-
-entire_team_details = {
+entire_team_details={
     "Gujju Gang (Nisarg)": {
         "players": [
             "Travis Head", "Varun Chakaravarthy", "Rahul Chahar", "Mukesh Choudhary", "Harshit Rana", 
@@ -39,6 +38,8 @@ entire_team_details = {
         ],
         "captain": "NA",
         "vice_captain": "NA",
+        "team_color": "#995C00"
+
     },
     "Hilarious Hooligans (KARAM)": {
         "players": [
@@ -49,8 +50,9 @@ entire_team_details = {
             "Shahrukh Khan", "Anrich Nortje", "Mayank Markande", "Yuzvendra Chahal", "Tushar Deshpande", 
             "Noor Ahmad", "Kagiso Rabada", "Marco Jansen"
         ],
-       "captain": "NA",
-        "vice_captain": "NA"
+        "captain": "NA",
+        "vice_captain": "NA",
+        "team_color": "#FFFF00"
     },
     "Tormented Titans (Aryan)": {
         "players": [
@@ -61,7 +63,8 @@ entire_team_details = {
             "Pat Cummins", "Quinton de Kock", "Ravichandran Ashwin"
         ],
         "captain": "NA",
-        "vice_captain": "NA"
+        "vice_captain": "NA",
+        "team_color": "#FFA500"
     },
     "La Furia Roja (Abhinav)": {
         "players": [
@@ -72,8 +75,9 @@ entire_team_details = {
             "Adam Zampa", "Spencer Johnson", "Jamie Overton", "Shashank Singh", "Rovman Powell", 
             "Suryansh Shedge", "Maheesh Theekshana"
         ],
-       "captain": "Shreyas Iyer",
-        "vice_captain": "Sai Sudharsan"
+        "captain": "Shreyas Iyer",
+        "vice_captain": "Sai Sudharsan",
+        "team_color": "#FF0000"
     },
     "Supa Jinx Strikas (Varun)": {
         "players": [
@@ -83,8 +87,9 @@ entire_team_details = {
             "Glenn Phillips", "Tim David", "Ravi Bishnoi", "Donovan Ferreira", "Jayant Yadav", 
             "Trent Boult", "Jofra Archer", "Akash Madhwal", "Darshan Nalkande", "Kwena Maphaka"
         ],
-       "captain": "Shubman Gill",
-        "vice_captain": "Ruturaj Gaikwad"
+        "captain": "Shubman Gill",
+        "vice_captain": "Ruturaj Gaikwad",
+        "team_color": "#0000FF"
     },
     "Raging Raptors (Aditya)": {
         "players": [
@@ -94,8 +99,9 @@ entire_team_details = {
             "Mitchell Starc", "Sanju Samson", "Jos Buttler", "Atharva Taide", "Musheer Khan", 
             "Devon Conway", "Venkatesh Iyer"
         ],
-       "captain": "KL Rahul",
-        "vice_captain": "Venkatesh Iyer"
+        "captain": "KL Rahul",
+        "vice_captain": "Venkatesh Iyer",
+        "team_color": "#008000"
     },
     "The Traveling Bankers (Aakash)": {
         "players": [
@@ -106,7 +112,11 @@ entire_team_details = {
             "Mujeeb Ur Rahman", "Anshul Kamboj", "Mahipal Lomror"
         ],
         "vice_captain": "Andre Russell",
-        "captain": "Sunil Narine"
+        "captain": "Sunil Narine",
+        "injured": ["Umran Malik"],
+        "replacements": ["Chetan Sakariya"],
+        "team_owner": "Aakash",
+        "team_color": "#800080"
     }
 }
 
