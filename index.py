@@ -50,8 +50,8 @@ entire_team_details={
             "Shahrukh Khan", "Anrich Nortje", "Mayank Markande", "Yuzvendra Chahal", "Tushar Deshpande", 
             "Noor Ahmad", "Kagiso Rabada", "Marco Jansen"
         ],
-        "captain": "NA",
-        "vice_captain": "NA",
+        "captain": "Yashasvi Jaiswal",
+        "vice_captain": "Axar Patel",
         "team_color": "#FFFF00"
     },
     "Tormented Titans (Aryan)": {
@@ -62,8 +62,8 @@ entire_team_details={
             "Sherfane Rutherford", "Glenn Maxwell", "Sandeep Sharma", "Suryakumar Yadav", "Shamar Joseph", 
             "Pat Cummins", "Quinton de Kock", "Ravichandran Ashwin"
         ],
-        "captain": "NA",
-        "vice_captain": "NA",
+        "captain": "Virat Kohli",
+        "vice_captain": "Suryakumar Yadav",
         "team_color": "#FFA500"
     },
     "La Furia Roja (Abhinav)": {
