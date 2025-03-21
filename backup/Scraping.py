@@ -129,11 +129,7 @@ def match_dismissals_output(ipl_url, match_number):
 
 def find_full_name(team,short_name):
     try:
-        if "Varun Chak" in short_name:
-            return "Varun Chakaravarthy"
-        if "Reddy" in short_name and "Nitish" in short_name:
-            return "Nitish Reddy"
-        player = ""
+        team_copy = []
         for player in team:
             if len(player)>len(short_name):
                 count = 0
@@ -179,16 +175,17 @@ def find_full_name(team,short_name):
                 if count == 0:
                     return player
                 
-        if player == "":
-            try:
-                best_match, score, _ = process.extractOne(short_name, team)
-                if score > 70:
-                    return best_match
-                else:
-                    print(short_name,"not found")
-            except:
-                print(short_name,"not found")
-                pass
+
+        # try:
+        #     best_match, score, _ = process.extractOne(short_name, team_copy)
+        #     if score > 10:
+        #         return best_match
+        #     else:
+        #         return short_name
+        #         #print(short_name,"not found")
+        # except:
+        #     #print(short_name,"not found")
+        #     pass
     except:
         return None
 
@@ -235,31 +232,45 @@ def dismissals_final_generator(ipl_url,game_number):
         pass
 
     mapped_catchers = mapped_stumpers = mapped_main_runouters = mapped_secondary_runouters = mapped_bowled = mapped_lbw = {}
+    try:
+        mapped_catchers = [full_name for team, names in catchers.items() 
+        for name in names 
+        if (full_name := find_full_name(players[team], name)) is not None]
+    except:
+        pass
+    try:
+        mapped_stumpers = [full_name for team, names in stumpers.items() 
+        for name in names 
+        if (full_name := find_full_name(players[team], name)) is not None]
+    except:
+        pass
+    try:
+        mapped_main_runouters = [   full_name for team, names in runouters_main.items() 
+        for name in names 
+        if (full_name := find_full_name(players[team], name)) is not None]
+    except:
+        pass
 
-    mapped_catchers = [full_name for team, names in catchers.items() 
-    for name in names 
-    if (full_name := find_full_name(players[team], name)) is not None]
+    try:
+        mapped_secondary_runouters = [   full_name for team, names in runouters_secondary.items() 
+        for name in names 
+        if (full_name := find_full_name(players[team], name)) is not None]
+    except:
+        pass
 
-    mapped_stumpers = [full_name for team, names in stumpers.items() 
-    for name in names 
-    if (full_name := find_full_name(players[team], name)) is not None]
+    try:
+        mapped_bowled = [   full_name for team, names in bowled.items() 
+        for name in names 
+        if (full_name := find_full_name(players[team], name)) is not None]
+    except:
+        pass
 
-    mapped_main_runouters = [full_name for team, names in runouters_main.items() 
-    for name in names 
-    if (full_name := find_full_name(players[team], name)) is not None]
-
-    mapped_secondary_runouters = [full_name for team, names in runouters_secondary.items() 
-    for name in names 
-    if (full_name := find_full_name(players[team], name)) is not None]
-
-    mapped_bowled = [full_name for team, names in bowled.items() 
-    for name in names 
-    if (full_name := find_full_name(players[team], name)) is not None]
-
-
-    mapped_lbw = [   full_name for team, names in lbw.items() 
-    for name in names 
-    if (full_name := find_full_name(players[team], name)) is not None]
+    try:
+        mapped_lbw = [   full_name for team, names in lbw.items() 
+        for name in names 
+        if (full_name := find_full_name(players[team], name)) is not None]
+    except:
+        pass
 
     return players,mapped_catchers,mapped_stumpers,mapped_main_runouters, mapped_secondary_runouters, mapped_bowled, mapped_lbw
 
@@ -452,36 +463,35 @@ class Score:
         print("Man of the Match: ",self.man_of_the_match)
         
 class Series:
-    def __init__(self,url,cricbuzz_page_link,database_name):
+    def __init__(self,url,cricbuzz_page_link):
         self.url = url
         self.cricbuzz_page_link = cricbuzz_page_link
-        self.database_name = database_name
         self.match_objects = {}
         self.match_links = []
         match_links = self.match_link_generator()
         #self.player_list,self.team_links = self.TeamLinks()
         try:
-            with open(self.database_name, "rb") as file:
+            with open("ipl2024matches.pkl", "rb") as file:
                 ipl = dill.load(file)
         except:
             ipl = {}
         match_objects = ipl
         match_links_list = list(ipl.keys())
-        if len(match_links)>=len(match_links_list):
+        if len(match_links)>len(match_links_list):
             for match in match_links:
-                if match not in match_links_list or match == match_links_list[len(match_links_list)-1]:
+                if match not in match_links_list:
                     try:
                         match_object = Score(match,self.cricbuzz_page_link)
                         url = match_object.url
                         #match_number = match_number_generator(url)
                         match_objects[url] = match_object
-                        print("Added:",url)
+                        print(" :",url)
                     except:
                         print("Match Number",match,"Abandoned")
             if len(list(match_objects.keys())) == len(match_links):
                 self.match_links = match_links
                 self.match_objects = match_objects
-                with open(self.database_name, "wb") as file:
+                with open("ipl2024matches.pkl", "wb") as file:
                     dill.dump(match_objects, file)
                 print("LOADING SUCCESSFUL")
             else:
