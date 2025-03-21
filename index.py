@@ -177,7 +177,8 @@ def last_match_and_overall_points():
     json_result = filter_participant_data(team_breakdown, teams)
 
 
-    orange_cap,purple_cap = op_caps("https://www.espncricinfo.com/series/indian-premier-league-2024-1410320/stats") #ipl-2025-1449924 #Change this later
+    orange_cap,purple_cap = '',''
+    # orange_cap,purple_cap = op_caps("https://www.espncricinfo.com/series/indian-premier-league-2024-1410320/stats") #ipl-2025-1449924 #Change this later
 
     return jsonify({
         "last_match": match_name,
