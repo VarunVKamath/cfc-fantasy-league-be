@@ -17,100 +17,61 @@ CORS(app)
 
 entire_team_details = {
     "Gujju Gang": {
-        "players": [
-            "Varun Chakaravarthy", "Travis Head", "Rahul Chahar", "Mukesh Choudhary", "Harshit Rana",
-            "Ishant Sharma", "Jaydev Unadkat", "Mukesh Kumar", "Abdul Samad", "Riyan Parag",
-            "Khaleel Ahmed", "Avesh Khan", "Faf Du Plessis", "Arjun Tendulkar", "Mohammed Shami",
-            "Shivam Dube", "Lockie Ferguson", "Josh Hazlewood", "Prabhsimran Singh", "Rishabh Pant",
-            "Corbin Bosch", "Mohammed Siraj", "Prasidh Krishna", "Marcus Stoinis", "Harpreet Brar",
-            "Rahmanullah Gurbaz", "Rashid Khan", "Washington Sundar"
-        ],
+        "players":  ['Varun Chakaravarthy','Travis Head','Harshit Rana','Rahul Chahar','Mukesh Choudhary','Ishant Sharma','Jaydev Unadkat','Mukesh Kumar','Abdul Samad','Riyan Parag','Khaleel Ahmed','Avesh Khan','Faf du Plessis','Arjun Tendulkar','Mohammed Shami','Shivam Dube','Lockie Ferguson','Josh Hazlewood','Prabhsimran Singh','Rishabh Pant','Corbin Bosch','Mohammed Siraj','Prasidh Krishna','Marcus Stoinis','Harpreet Brar','Rahmanullah Gurbaz','Rashid Khan','Washington Sundar'],
+
         "captain": "Varun Chakaravarthy",
         "vice_captain": "Travis Head",
         "team_color": "#995C00",
         "team_owner": "Nisarg"
     },
     "Hilarious Hooligans": {
-        "players": [
-            "Yashasvi Jaiswal", "Axar Patel", "Hardik Pandya", "Heinrich Klaasen", "Rinku Singh",
-            "Nehal Wadhera", "Romario Shepherd", "Manav Suthar", "Vijaykumar Vyshak", "Himmat Singh",
-            "Ayush Badoni", "Liam Livingstone", "Nathan Ellis", "Moeen Ali", "Karn Sharma",
-            "Shimron Hetmyer", "Mayank Yadav", "Abhinav Manohar", "Ashutosh Sharma", "Rachin Ravindra",
-            "Shahrukh Khan", "Anrich Nortje", "Mayank Markande", "Yuzvendra Chahal", "Tushar Deshpande",
-            "Noor Ahmad", "Kagiso Rabada", "Marco Jansen"
-        ],
+        "players":              ['Yashasvi Jaiswal','Axar Patel','Hardik Pandya','Heinrich Klaasen','Rinku Singh','Nehal Wadhera','Romario Shepherd','Manav Suthar','Vijaykumar Vyshak','Himmat Singh','Ayush Badoni','Liam Livingstone','Nathan Ellis','Moeen Ali','Karn Sharma','Shimron Hetmyer','Mayank Yadav','Abhinav Manohar','Ashutosh Sharma','Rachin Ravindra','Shahrukh Khan','Anrich Nortje','Mayank Markande','Yuzvendra Chahal','Tushar Deshpande','Noor Ahmad','Kagiso Rabada','Marco Jansen'],
+
         "captain": "Yashasvi Jaiswal",
         "vice_captain": "Axar Patel",
         "team_color": "#FFFF00",
         "team_owner": "Karam"
     },
     "Tormented Titans": {
-        "players": [
-            "Virat Kohli", "Suryakumar Yadav", "Abhishek Sharma", "Jitesh Sharma", "Harnoor Singh",
-            "Bhuvneshwar Kumar", "Abishek Porel", "Angkrish Raghuvanshi", "Kuldeep Yadav", "David Miller",
-            "Anuj Rawat", "Josh Inglis", "Kumar Kartikeya", "Akash Deep", "Rahul Tewatia",
-            "Ramandeep Singh", "Sherfane Rutherford", "Glenn Maxwell", "Sandeep Sharma", "Shamar Joseph",
-            "Pat Cummins", "Quinton de Kock", "Ravichandran Ashwin"
-        ],
+        "players":              ['Virat Kohli','Suryakumar Yadav','Abhishek Sharma','Jitesh Sharma','Harnoor Singh','Bhuvneshwar Kumar','Abishek Porel','Angkrish Raghuvanshi','Kuldeep Yadav','Dhruv Jurel','David Miller','Anuj Rawat','Josh Inglis','Kumar Kartikeya','Akash Deep','Rahul Tewatia','Ramandeep Singh','Sherfane Rutherford','Glenn Maxwell','Sandeep Sharma','Shamar Joseph','Pat Cummins','Quinton de Kock','Ravichandran Ashwin'],
+
         "captain": "Virat Kohli",
         "vice_captain": "Suryakumar Yadav",
         "team_color": "#FFA500",
         "team_owner": "Aryan"
     },
     "La Furia Roja": {
-        "players": [
-            "Shreyas Iyer", "Sai Sudharsan", "Jasprit Bumrah", "Swastik Chikara", "Rajvardhan Hangargekar",
-            "Manoj Bhandage", "Nitish Rana", "Rasikh Dar Salam", "Deepak Chahar", "MS Dhoni",
-            "Aaron Hardie", "Priyansh Arya", "Phil Salt", "Sameer Rizvi", "Mitchell Santner",
-            "Manish Pandey", "Suyash Sharma", "Kamlesh Nagarkoti", "Will Jacks", "Azmatullah Omarzai",
-            "Adam Zampa", "Spencer Johnson", "Jamie Overton", "Shashank Singh", "Rovman Powell",
-            "Suryansh Shedge", "Maheesh Theekshana"
-        ],
+        "players":              ['Shreyas Iyer','Sai Sudharsan','Jasprit Bumrah','Swastik Chikara','Rajvardhan Hangargekar','Manoj Bhandage','Nitish Rana','Rasikh Dar Salam','Deepak Chahar','MS Dhoni','Aaron Hardie','Priyansh Arya','Phil Salt','Sameer Rizvi','Mitchell Santner','Manish Pandey','Suyash Sharma','Kamlesh Nagarkoti','Will Jacks','Azmatullah Omarzai','Adam Zampa','Spencer Johnson','Jamie Overton','Shashank Singh','Rovman Powell','Suryansh Shedge','Maheesh Theekshana'],
+
         "captain": "Shreyas Iyer",
         "vice_captain": "Sai Sudharsan",
         "team_color": "#FF0000",
         "team_owner": "Abhinav"
     },
     "Supa Jinx Strikas": {
-        "players": [
-            "Shubman Gill", "Ruturaj Gaikwad", "Mohit Sharma", "Sai Kishore", "Raj Bawa",
-            "Ishan Kishan", "Mitchell Marsh", "Nitish Reddy", "Karim Janat", "Yash Dayal",
-            "Bevon Jacobs", "Ryan Rickelton", "Rajat Patidar", "Tristan Stubbs", "Gerald Coetzee",
-            "Glenn Phillips", "Tim David", "Ravi Bishnoi", "Donovan Ferreira", "Jayant Yadav",
-            "Trent Boult", "Jofra Archer", "Akash Madhwal", "Darshan Nalkande", "Kwena Maphaka"
-        ],
+        "players":              ['Shubman Gill','Ruturaj Gaikwad','Nitish Reddy','Mohit Sharma','Sai Kishore','Raj Bawa','Ishan Kishan','Mitchell Marsh','Karim Janat','Yash Dayal','Bevon Jacobs','Ryan Rickelton','Rajat Patidar','Tristan Stubbs','Gerald Coetzee','Glenn Phillips','Tim David','Ravi Bishnoi','Donovan Ferreira','Jayant Yadav','Trent Boult','Jofra Archer','Akash Madhwal','Darshan Nalkande','Kwena Maphaka'],
+
         "captain": "Shubman Gill",
         "vice_captain": "Ruturaj Gaikwad",
         "team_color": "#0000FF",
         "team_owner": "Varun"
     },
     "Raging Raptors": {
-        "players": [
-            "KL Rahul", "Venkatesh Iyer", "Arshdeep Singh", "Aiden Markram", "Sachin Baby",
-            "Dushmantha Chameera", "Naman Dhir", "Karun Nair", "Wanindu Hasaranga", "Arshad Khan",
-            "Devdutt Padikkal", "Robin Minz", "Shahbaz Ahmed", "Mohsin Khan", "Krunal Pandya",
-            "Ravindra Jadeja", "Mitchell Starc", "Sanju Samson", "Jos Buttler", "Atharva Taide",
-            "Musheer Khan", "Devon Conway",
-        ],
+        "players":              ['KL Rahul','Venkatesh Iyer','Arshdeep Singh','Ravindra Jadeja','Aiden Markram','Sachin Baby','Dushmantha Chameera','Naman Dhir','Karun Nair','Wanindu Hasaranga','Arshad Khan','Devdutt Padikkal','Robin Minz','Shahbaz Ahmed','Mohsin Khan','Krunal Pandya','Mitchell Starc','Sanju Samson','Jos Buttler','Atharva Taide','Musheer Khan','Devon Conway','Shardul Thakur'],
+
         "captain": "KL Rahul",
         "vice_captain": "Venkatesh Iyer",
         "team_color": "#008000",
         "team_owner": "Aditya",
         "injured": ["Mohsin Khan"],
-        "replacements": ['Shardul Thakur'],
+        # "replacements": ['Shardul Thakur'],
     },
     "The Travelling Bankers": {
-        "players": [
-            "Sunil Narine", "Andre Russell", "T Natarajan", "Ajinkya Rahane", "Shreyas Gopal",
-            "Tilak Varma", "Vijay Shankar", "Shubham Dubey", "Anukul Roy", "Deepak Hooda",
-            "Harshal Patel", "Rahul Tripathi", "Lungi Ngidi", "Matheesha Pathirana", "Vaibhav Arora",
-            "Nicholas Pooran", "Jake Fraser-McGurk", "Sam Curran", "Rohit Sharma", "Mujeeb Ur Rahman",
-            "Anshul Kamboj", "Mahipal Lomror" ,"Umran Malik"
-        ],
+        "players": ['Sunil Narine','Andre Russell','Harshal Patel','Umran Malik','Chetan Sakariya','T Natarajan','Ajinkya Rahane','Shreyas Gopal','Tilak Varma','Vijay Shankar','Shubham Dubey','Anukul Roy','Deepak Hooda','Rahul Tripathi','Lungi Ngidi','Matheesha Pathirana','Vaibhav Arora','Nicholas Pooran','Jake Fraser-McGurk','Sam Curran','Rohit Sharma','Mujeeb Ur Rahman','Anshul Kamboj','Mahipal Lomror'],
         "captain": "Sunil Narine",
         "vice_captain": "Andre Russell",
         "injured": ["Umran Malik"],
-        "replacements": ["Chetan Sakariya"],
+        # "replacements": ["Chetan Sakariya"],
         "team_color": "#800080",
         "team_owner": "Aakash"
     }
@@ -249,7 +210,7 @@ def get_fantasy_league():
         # Write the JSON to the file
         with open(json_filename, "w") as file:
             json.dump(data, file, indent=4, cls=NumpyEncoder)
-        print("JSON file created successfully!")
+        # print("JSON file created successfully!")
 
         df = pd.DataFrame(index=team_list, columns=columns)
 
@@ -257,7 +218,7 @@ def get_fantasy_league():
         with pd.ExcelWriter(file_path, engine="xlsxwriter") as writer:  
             df.to_excel(writer, sheet_name="Team Final Points")  
 
-        print(f"Excel file '{file_path}' created successfully!")
+        # print(f"Excel file '{file_path}' created successfully!")
 
     match_objects = ipl.match_objects
 
@@ -288,6 +249,7 @@ def get_fantasy_league():
 
     #url = "https://www.espncricinfo.com/series/indian-premier-league-2024-1410320/kolkata-knight-riders-vs-sunrisers-hyderabad-3rd-match-1422121/full-scorecard"             
     match_urls = list(match_objects.keys())
+    print(match_urls)
     number_of_matches = len(match_objects)
     last_match_url=match_urls[number_of_matches-1]
     last_match_name=match_name_generator(last_match_url)
@@ -327,7 +289,7 @@ def get_fantasy_league():
             spreadsheet['Team Final Points'].setdefault(team, {}).setdefault("Purple Cap", 0)
             spreadsheet['Team Final Points'][team][match_name] = team_breakdown.loc[team,'Total Points']
             #final_points[team]['Total Points'] += final_points[team][match_name]
-        print(match_name,"added")
+        # print(match_name,"added")
     try:
         if number_of_matches>=9:
             for team in list(spreadsheet['Team Final Points'].keys()):
@@ -340,7 +302,7 @@ def get_fantasy_league():
                 #final_points[team]['Total Points'] += orange_cap_points + purple_cap_points
                 spreadsheet['Team Final Points'][team]['Orange Cap'] = orange_cap_points
                 spreadsheet['Team Final Points'][team]['Purple Cap'] = purple_cap_points
-            print("Purple Cap, Orange Cap, Total Points added")
+            # print("Purple Cap, Orange Cap, Total Points added")
 
         player_list_points = []
         match_list_points = []
@@ -384,7 +346,7 @@ def get_fantasy_league():
                 if match_name != 'Total Points':
                     spreadsheet['Team Final Points'][participant]['Total Points'] += spreadsheet['Team Final Points'][participant][match_name]
         spreadsheet['Team Final Points'] = dict(sorted(spreadsheet['Team Final Points'].items(), key=lambda x: x[1]['Total Points'], reverse=True))
-        print("Final Team Points Added")
+        # print("Final Team Points Added")
 
         for player in spreadsheet['Player Final Points'].keys():  
             if number_of_matches>=9:
@@ -424,13 +386,13 @@ def get_fantasy_league():
         # Assign back to the spreadsheet
         spreadsheet['Player Final Points'] = sorted_players
 
-        print("Player Points Added")
+        # print("Player Points Added")
 
         spreadsheet_serializable = convert_values(spreadsheet)
         #json_filename = "CFC Fantasy League.json"
         with open(json_filename, "w") as json_file:
             json.dump(spreadsheet_serializable, json_file, indent=4, cls=NumpyEncoder)
-        print("JSON file created successfully!")
+        # print("JSON file created successfully!")
 
         # Write to Excel
         with pd.ExcelWriter(file_path, engine="xlsxwriter") as writer:
@@ -445,7 +407,7 @@ def get_fantasy_league():
                     df = pd.DataFrame(columns=["Placeholder"])  
                 df.to_excel(writer, sheet_name=sheet_name)  # Keep index for readability
                 
-            print(f"Excel file saved successfully as {file_path} in the current folder.")
+            # print(f"Excel file saved successfully as {file_path} in the current folder.")
     except:
         print("No New Data was Added")
 
@@ -454,7 +416,7 @@ def get_fantasy_league():
     minutes = str(int(total_time_taken/60))
     seconds = str(round(total_time_taken % 60,3))
     total_time_taken = minutes+"m "+seconds+"s"
-    print(f"Time taken to process data: {total_time_taken}")        
+    # print(f"Time taken to process data: {total_time_taken}")        
 
     if os.path.exists(JSON_FILE_PATH):
         with open(JSON_FILE_PATH, 'r', encoding='utf-8') as file:
