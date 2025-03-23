@@ -108,6 +108,7 @@ if __name__ == '__main__':
     orange_cap,purple_cap = op_caps("https://www.espncricinfo.com/series/ipl-2025-1449924/stats")
 
     ipl = Series(ipl_url,cricbuzz_page_link,database)
+    print(ipl)
 
     try:
         spreadsheet = excel_to_dict(file_path)
