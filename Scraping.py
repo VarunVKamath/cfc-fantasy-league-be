@@ -20,7 +20,7 @@ def match_number_generator(match_link):
         match_number = 72
     elif parts[1] == 'final':
         match_number = 74
-    return match_number
+    return int(match_number)
 
 def extract_team_players(players_list, impact_sub_class):
     team = []
@@ -306,16 +306,23 @@ class Score:
         player_list,catchers,stumpers,main_runouters,secondary_runouters,bowled,lbw = dismissals_final_generator(self.cricbuzz_page_link,match_number)
         team_names = list(player_list.keys())
         full_player_list = [player for team in team_names for player in player_list[team]]
-
-        winner = soup.find('p',class_="ds-text-tight-s ds-font-medium ds-truncate ds-text-typo").text.strip()
-        winner = self.find_team(winner)
+        try:
+            winner = soup.find('p',class_="ds-text-tight-s ds-font-medium ds-truncate ds-text-typo").text.strip()
+            winner = self.find_team(winner)
+        except:
+            winner = ""
 
         match_details_table = soup.find('table',class_= "ds-w-full ds-table ds-table-sm ds-table-auto") 
         table_rows = match_details_table.find_all('tr')
+        c1 = 0
         for row in table_rows:
             if "Player Of The Match" in row.text:
                 man_of_the_match = row.find('td',class_="ds-text-typo").text.strip()
                 man_of_the_match = find_full_name(full_player_list,man_of_the_match)
+                c1+=1
+                break
+        if c1==0:
+            man_of_the_match = ""
         
         innings_tables = soup.find_all('div', class_='ds-rounded-lg ds-mt-2')
 
@@ -469,17 +476,22 @@ class Series:
         match_links_list = list(ipl.keys())
         if len(match_links)>=len(match_links_list):
             for match in match_links:
-                if match not in match_links_list or match == match_links_list[len(match_links_list)-1]:
+                url = match
+                if match not in match_links_list or match == match_links[-1]:
+                    # if match == last_match_stored:
+                    #     if 'full-scorecard' in last_match_stored:
+                    #         break
+                    #     else:
+                    #         url = url.replace('live-cricket-score','full-scorecard')
                     try:
-                        match_object = Score(match,self.cricbuzz_page_link)
-                        url = match_object.url
-                        #match_number = match_number_generator(url)
-                        match_objects[url] = match_object
+                        match_object = Score(url,self.cricbuzz_page_link)
+                        match_objects[match] = match_object
                         print("Added:",url)
                     except:
                         print("Match Number",match,"Abandoned")
             if len(list(match_objects.keys())) == len(match_links):
                 self.match_links = match_links
+                #print(match_links)
                 self.match_objects = match_objects
                 with open(self.database_name, "wb") as file:
                     dill.dump(match_objects, file)
@@ -509,14 +521,23 @@ class Series:
             match_block = match_box.find('a',class_="ds-no-tap-higlight")
             try:
                 link_part = match_block['href']
+                abandoned = ""
                 abandoned = match_block.find('p',class_='ds-text-tight-s ds-font-medium ds-line-clamp-2 ds-text-typo').text.strip()
                 # print("Match Result:",abandoned)
                 # print("Match url",link_part)
+                if "Match yet to begin" in abandoned:
+                    break
                 if 'bandoned without a ball bowled' not in abandoned and 'bandoned with a toss' not in abandoned:
-                    if "indian-premier-league" in link_part or "ipl-2025" in link_part and 'full-scorecard' in link_part:
-                        match_link = "https://www.espncricinfo.com" + link_part
-                        if match_link not in match_links:
-                            match_links.append(match_link)
+                    if "indian-premier-league" in link_part or "ipl-2025" in link_part:
+                        if 'full-scorecard' in link_part:
+                            match_link = "https://www.espncricinfo.com" + link_part
+                            if match_link not in match_links:
+                                match_links.append(match_link)
+                        elif 'live-cricket-score' in link_part:
+                            match_link = "https://www.espncricinfo.com" + link_part.replace('live-cricket-score','full-scorecard')
+                            if match_link not in match_links:
+                                match_links.append(match_link)
+                            break
             except:
                 pass
         return match_links
