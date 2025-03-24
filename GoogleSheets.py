@@ -12,7 +12,7 @@ except gspread.exceptions.SpreadsheetNotFound:
     spreadsheet = gc.create(spreadsheet_name)  # Create new spreadsheet if not found
 
 # Load Excel file and its sheets
-excel_file = "CFC Fantasy League.xlsx"
+excel_file = "CFC Fantasy League 2025.xlsx"
 sheets = pd.ExcelFile(excel_file).sheet_names  # Get all sheet names
 
 # Get existing sheet names in Google Sheets

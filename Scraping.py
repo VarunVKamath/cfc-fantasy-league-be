@@ -459,42 +459,54 @@ class Score:
         print("Man of the Match: ",self.man_of_the_match)
         
 class Series:
-    def __init__(self, url, cricbuzz_page_link, database_name):
+    def __init__(self,url,cricbuzz_page_link,database_name):
         self.url = url
         self.cricbuzz_page_link = cricbuzz_page_link
         self.database_name = database_name
         self.match_objects = {}
-        self.match_links = self.match_link_generator()
-
+        self.match_links = []
+        match_links = self.match_link_generator()
+        #self.player_list,self.team_links = self.TeamLinks()
         try:
             with open(self.database_name, "rb") as file:
-                match_objects = dill.load(file)  # Load existing match data
-        except FileNotFoundError:
-            match_objects = {}
-
-        existing_links = set(match_objects.keys())
-
-        if len(self.match_links) >= len(existing_links):
-            for match_url in self.match_links:
-                if match_url not in existing_links:
+                ipl = dill.load(file)
+        except:
+            ipl = {}
+        match_objects = ipl
+        match_links_list = list(ipl.keys())
+        if len(match_links)>=len(match_links_list):
+            for match in match_links:
+                url = match
+                if match not in match_links_list or match == match_links[-1]:
+                    # if match == last_match_stored:
+                    #     if 'full-scorecard' in last_match_stored:
+                    #         break
+                    #     else:
+                    #         url = url.replace('live-cricket-score','full-scorecard')
                     try:
-                        match_objects[match_url] = Score(match_url, self.cricbuzz_page_link)
-                        print(f"Added: {match_url}")
-                    except Exception as e:
-                        print(f"Match {match_url} Abandoned - Error: {e}")
-
-            if len(match_objects) == len(self.match_links):
+                        match_object = Score(url,self.cricbuzz_page_link)
+                        match_objects[match] = match_object
+                        print("Added:",url)
+                    except:
+                        print("Match Number",match,"Abandoned")
+            if len(list(match_objects.keys())) == len(match_links):
+                self.match_links = match_links
+                #print(match_links)
                 self.match_objects = match_objects
                 with open(self.database_name, "wb") as file:
                     dill.dump(match_objects, file)
                 print("LOADING SUCCESSFUL")
             else:
-                print(f"Match Objects: {len(match_objects)}, Extracted Links: {len(self.match_links)}")
-                missing_links = set(self.match_links) - set(match_objects.keys())
-                print("Missing Links:", missing_links)
+                print("No. of match objects",len(match_objects))
+                print("Number of extracted links",len(match_links))
+                print("Missing Links:")
+                for match_url in match_links:
+                    if match_url not in list(match_objects.keys()):
+                        print(match_url)
         else:
             print("DATA UP TO DATE")
             self.match_objects = match_objects
+            self.match_links = match_links
 
     def match_link_generator(self):
         headers = {
@@ -504,29 +516,32 @@ class Series:
         response = requests.get(self.url, headers=headers)
         soup = BeautifulSoup(response.content, "html.parser")
         match_links = []
-
-        for match_box in soup.find_all('div'):
-            match_block = match_box.find('a', class_="ds-no-tap-higlight")
-            if not match_block:
-                continue
-
+        match_boxes = soup.find_all('div')
+        for match_box in match_boxes:     
+            match_block = match_box.find('a',class_="ds-no-tap-higlight")
             try:
                 link_part = match_block['href']
-                match_status = match_block.find('p', class_='ds-text-tight-s ds-font-medium ds-line-clamp-2 ds-text-typo').text.strip()
-
-                if "Match yet to begin" in match_status:
-                    continue  # Skip upcoming matches
-
-                if 'abandoned' not in match_status.lower():
+                abandoned = ""
+                abandoned = match_block.find('p',class_='ds-text-tight-s ds-font-medium ds-line-clamp-2 ds-text-typo').text.strip()
+                # print("Match Result:",abandoned)
+                # print("Match url",link_part)
+                if "Match yet to begin" in abandoned:
+                    break
+                if 'bandoned without a ball bowled' not in abandoned and 'bandoned with a toss' not in abandoned:
                     if "indian-premier-league" in link_part or "ipl-2025" in link_part:
-                        match_link = f"https://www.espncricinfo.com{link_part.replace('live-cricket-score', 'full-scorecard')}"
-                        if match_link not in match_links:
-                            match_links.append(match_link)
-
-            except AttributeError:
-                continue  # Skip elements without the expected structure
-
+                        if 'full-scorecard' in link_part:
+                            match_link = "https://www.espncricinfo.com" + link_part
+                            if match_link not in match_links:
+                                match_links.append(match_link)
+                        elif 'live-cricket-score' in link_part:
+                            match_link = "https://www.espncricinfo.com" + link_part.replace('live-cricket-score','full-scorecard')
+                            if match_link not in match_links:
+                                match_links.append(match_link)
+                            break
+            except:
+                pass
         return match_links
+    
 if __name__ == "__main__":  
     cricbuzz_page_link = "https://www.cricbuzz.com/cricket-series/7607/indian-premier-league-2024/matches"   
     ipl24_url = "https://www.espncricinfo.com/series/indian-premier-league-2024-1410320/match-schedule-fixtures-and-results"
