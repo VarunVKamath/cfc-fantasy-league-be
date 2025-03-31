@@ -121,6 +121,27 @@ def get_all_points():
             for player in details["players"]:
                 if player in data["Player Final Points"]:
                     last_match_points["player_final_points"][team][player] = data["Player Final Points"][player][last_match]
+        
+        purple_team_name = None
+        for team, details in data["Team Final Points"].items():
+            if details.get("Purple Cap") == 500:
+                purple_team_name = team
+
+        purple_player_name = None
+        for player, details in data["Player Final Points"].items():
+            if details.get("Purple Cap") == 500:
+                purple_player_name = player
+
+        orange_player_name = None
+        for player, details in data["Player Final Points"].items():
+            if details.get("Orange Cap") == 500:
+                orange_player_name = player
+
+        orange_team_name = None
+        for team, details in data["Team Final Points"].items():
+            if details.get("Orange Cap") == 500:
+                orange_team_name = team
+                break
         return jsonify(
             {
                 "total_points_per_team": results,
@@ -128,7 +149,15 @@ def get_all_points():
                 'last_match':last_match,
                 'total_points_per_player':team_points["player_final_points"],
                 'last_match_points_per_player':last_match_points["player_final_points"],
-                'entire_team_details': entire_team_details
+                'entire_team_details': entire_team_details,
+                'purple_cap':{
+                    'team':purple_team_name,
+                    'player':purple_player_name
+                },
+                'orange_cap':{
+                    'team':orange_team_name,
+                    'player':orange_player_name
+                }
                 
                 }
         )
