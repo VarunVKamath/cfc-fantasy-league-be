@@ -49,9 +49,10 @@ entire_team_details = {
              ['Shubman Gill','Ruturaj Gaikwad','Nitish Reddy','Mohit Sharma','Sai Kishore','Raj Bawa','Ishan Kishan','Mitchell Marsh','Karim Janat','Yash Dayal','Bevon Jacobs','Ryan Rickelton','Rajat Patidar','Tristan Stubbs','Gerald Coetzee','Glenn Phillips','Tim David','Ravi Bishnoi','Donovan Ferreira','Jayant Yadav','Trent Boult','Jofra Archer','Akash Madhwal','Darshan Nalkande','Kwena Maphaka'],
          
         "captain": "Shubman Gill",
-        "vice_captain": "Ruturaj Gaikwad",
+      # "vice_captain": "Ruturaj Gaikwad",
         "team_color": "#0000FF",
-        "team_owner": "Varun"
+        "team_owner": "Varun",
+        "injured": ["Ruturaj Gaikwad"]
     },
     "Raging Raptors": {
         "players":              ['KL Rahul','Venkatesh Iyer','Arshdeep Singh','Ravindra Jadeja','Aiden Markram','Sachin Baby','Dushmantha Chameera','Naman Dhir','Karun Nair','Wanindu Hasaranga','Arshad Khan','Devdutt Padikkal','Robin Minz','Shahbaz Ahmed','Mohsin Khan','Krunal Pandya','Mitchell Starc','Sanju Samson','Jos Buttler','Atharva Taide','Musheer Khan','Devon Conway','Shardul Thakur'],
