@@ -52,7 +52,7 @@ entire_team_details = {
       # "vice_captain": "Ruturaj Gaikwad",
         "team_color": "#0000FF",
         "team_owner": "Varun",
-        "injured": ["Ruturaj Gaikwad"]
+        "injured": ["Ruturaj Gaikwad",'Glenn Phillips']
     },
     "Raging Raptors": {
         "players":              ['KL Rahul','Venkatesh Iyer','Arshdeep Singh','Ravindra Jadeja','Aiden Markram','Sachin Baby','Dushmantha Chameera','Naman Dhir','Karun Nair','Wanindu Hasaranga','Arshad Khan','Devdutt Padikkal','Robin Minz','Shahbaz Ahmed','Mohsin Khan','Krunal Pandya','Mitchell Starc','Sanju Samson','Jos Buttler','Atharva Taide','Musheer Khan','Devon Conway','Shardul Thakur'],
