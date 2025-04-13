@@ -2,6 +2,7 @@ from flask import Flask, jsonify
 import json
 from flask_cors import CORS
 import os
+import re
 
 app = Flask(__name__)
 CORS(app)
@@ -49,10 +50,11 @@ entire_team_details = {
              ['Shubman Gill','Ruturaj Gaikwad','Nitish Reddy','Mohit Sharma','Sai Kishore','Raj Bawa','Ishan Kishan','Mitchell Marsh','Karim Janat','Yash Dayal','Bevon Jacobs','Ryan Rickelton','Rajat Patidar','Tristan Stubbs','Gerald Coetzee','Glenn Phillips','Tim David','Ravi Bishnoi','Donovan Ferreira','Jayant Yadav','Trent Boult','Jofra Archer','Akash Madhwal','Darshan Nalkande','Kwena Maphaka'],
          
         "captain": "Shubman Gill",
-      # "vice_captain": "Ruturaj Gaikwad",
+        # "vice_captain": "Ruturaj Gaikwad",
         "team_color": "#0000FF",
         "team_owner": "Varun",
         "injured": ["Ruturaj Gaikwad",'Glenn Phillips']
+
     },
     "Raging Raptors": {
         "players":              ['KL Rahul','Venkatesh Iyer','Arshdeep Singh','Ravindra Jadeja','Aiden Markram','Sachin Baby','Dushmantha Chameera','Naman Dhir','Karun Nair','Wanindu Hasaranga','Arshad Khan','Devdutt Padikkal','Robin Minz','Shahbaz Ahmed','Mohsin Khan','Krunal Pandya','Mitchell Starc','Sanju Samson','Jos Buttler','Atharva Taide','Musheer Khan','Devon Conway','Shardul Thakur'],
@@ -74,6 +76,49 @@ entire_team_details = {
         "team_owner": "Aakash"
     }
 }
+
+boosters = {'Gujju Gang':{},
+             'Hilarious Hooligans':{},
+             'Tormented Titans':{},
+             'La Furia Roja':{},
+             'Supa Jinx Strikas':{},
+             'Raging Raptors':{},
+             'The Travelling Bankers':{
+                 "https://www.espncricinfo.com/series/ipl-2025-1449924/kolkata-knight-riders-vs-lucknow-super-giants-21st-match-1473456/full-scorecard":"Batting Powerplay"
+             }
+             }
+
+
+booster_types = ["Triple Power", "Double Power", "Batting Powerplay", "Bowling Powerplay", "Triple Captain"]
+
+# Team short forms (for abbreviation)
+team_aliases = {
+    'royal challengers bengaluru': 'RCB',
+    'kolkata knight riders': 'KKR',
+    'sunrisers hyderabad': 'SRH',
+    'mumbai indians': 'MI',
+    'chennai super kings': 'CSK',
+    'delhi capitals': 'DC',
+    'punjab kings': 'PBKS',
+    'lucknow super giants': 'LSG',
+    'rajasthan royals': 'RR',
+    'gujarat titans': 'GT'
+}
+
+def extract_match_name(url):
+    match = re.search(r'/([^/]+)/full-scorecard', url)
+    if match:
+        slug = match.group(1)
+        slug = re.sub(r'-\d+(st|nd|rd|th)-match.*', '', slug)
+        teams = slug.split('-vs-')
+        if len(teams) == 2:
+            team1_raw = teams[0].replace('-', ' ')
+            team2_raw = teams[1].replace('-', ' ')
+            team1 = team_aliases.get(team1_raw.lower(), team1_raw.upper())
+            team2 = team_aliases.get(team2_raw.lower(), team2_raw.upper())
+            return f"{team1} Vs {team2}"
+    return "Unknown Match"
+
 
 @app.route('/last-match-and-overall-points', methods=['GET'])
 def get_all_points():
@@ -142,7 +187,15 @@ def get_all_points():
         for team, details in data["Team Final Points"].items():
             if details.get("Orange Cap") == 500:
                 orange_team_name = team
-                break
+
+        team_booster_summary = {}
+
+        for team, matches in boosters.items():
+            used = {booster: "NA" for booster in booster_types}
+            for match_url, booster in matches.items():
+                match_name = extract_match_name(match_url)
+                used[booster] = match_name
+            team_booster_summary[team] = used
         return jsonify(
             {
                 "total_points_per_team": results,
@@ -158,7 +211,9 @@ def get_all_points():
                 'orange_cap':{
                     'team':orange_team_name,
                     'player':orange_player_name
-                }
+                },
+
+                'team_booster_summary':team_booster_summary
                 
                 }
         )
