@@ -18,7 +18,8 @@ entire_team_details = {
         "captain": "Varun Chakaravarthy",
         "vice_captain": "Travis Head",
         "team_color": "#995C00",
-        "team_owner": "Nisarg"
+        "team_owner": "Nisarg",
+        "injured": ['Lockie Ferguson']
     },
     "Hilarious Hooligans": {
         "players":              ['Yashasvi Jaiswal','Axar Patel','Hardik Pandya','Heinrich Klaasen','Rinku Singh','Nehal Wadhera','Romario Shepherd','Manav Suthar','Vijaykumar Vyshak','Himmat Singh','Ayush Badoni','Liam Livingstone','Nathan Ellis','Moeen Ali','Karn Sharma','Shimron Hetmyer','Mayank Yadav','Abhinav Manohar','Ashutosh Sharma','Rachin Ravindra','Shahrukh Khan','Anrich Nortje','Mayank Markande','Yuzvendra Chahal','Tushar Deshpande','Noor Ahmad','Kagiso Rabada','Marco Jansen'],
@@ -38,19 +39,22 @@ entire_team_details = {
     },
     "La Furia Roja": {
         "players":    
-            ['Shreyas Iyer','Sai Sudharsan','Jasprit Bumrah','Swastik Chikara','Rajvardhan Hangargekar','Manoj Bhandage','Nitish Rana','Rasikh Salam Dar','Deepak Chahar','MS Dhoni','Aaron Hardie','Priyansh Arya','Phil Salt','Sameer Rizvi','Mitchell Santner','Manish Pandey','Suyash Sharma','Kamlesh Nagarkoti','Will Jacks','Azmatullah Omarzai','Adam Zampa','Spencer Johnson','Jamie Overton','Shashank Singh','Rovman Powell','Suryansh Shedge','Maheesh Theekshana'],
+            ['Shreyas Iyer','Sai Sudharsan','Jasprit Bumrah','Swastik Chikara','Rajvardhan Hangargekar','Manoj Bhandage','Nitish Rana','Rasikh Salam Dar','Deepak Chahar','MS Dhoni','Aaron Hardie','Priyansh Arya','Phil Salt','Sameer Rizvi','Mitchell Santner','Manish Pandey','Suyash Sharma','Kamlesh Nagarkoti','Will Jacks','Azmatullah Omarzai','Adam Zampa','Spencer Johnson','Jamie Overton','Shashank Singh','Rovman Powell','Suryansh Shedge','Maheesh Theekshana','Smaran Ravichandran'],
           
         "captain": "Shreyas Iyer",
         "vice_captain": "Sai Sudharsan",
         "team_color": "#FF0000",
-        "team_owner": "Abhinav"
+        "team_owner": "Abhinav",
+        "injured": ['Adam Zampa']
+
     },
     "Supa Jinx Strikas": {
         "players": 
-             ['Shubman Gill','Ruturaj Gaikwad','Nitish Reddy','Mohit Sharma','Sai Kishore','Raj Bawa','Ishan Kishan','Mitchell Marsh','Karim Janat','Yash Dayal','Bevon Jacobs','Ryan Rickelton','Rajat Patidar','Tristan Stubbs','Gerald Coetzee','Glenn Phillips','Tim David','Ravi Bishnoi','Donovan Ferreira','Jayant Yadav','Trent Boult','Jofra Archer','Akash Madhwal','Darshan Nalkande','Kwena Maphaka'],
+             ['Shubman Gill','Ruturaj Gaikwad','Nitish Reddy','Mohit Sharma','Sai Kishore','Raj Bawa','Ishan Kishan','Mitchell Marsh','Karim Janat','Yash Dayal','Bevon Jacobs','Ryan Rickelton','Rajat Patidar','Tristan Stubbs','Gerald Coetzee','Glenn Phillips','Tim David','Ravi Bishnoi','Donovan Ferreira','Jayant Yadav','Trent Boult','Jofra Archer','Akash Madhwal','Darshan Nalkande','Kwena Maphaka','Ayush Mhatre'],
          
         "captain": "Shubman Gill",
         # "vice_captain": "Ruturaj Gaikwad",
+        "vice_captain": "Ayush Mhatre",
         "team_color": "#0000FF",
         "team_owner": "Varun",
         "injured": ["Ruturaj Gaikwad",'Glenn Phillips']
@@ -82,7 +86,10 @@ boosters = {'Gujju Gang':{},
              'Tormented Titans':{},
              'La Furia Roja':{},
              'Supa Jinx Strikas':{},
-             'Raging Raptors':{},
+             'Raging Raptors':{
+                 'https://www.espncricinfo.com/series/ipl-2025-1449924/delhi-capitals-vs-rajasthan-royals-32nd-match-1473469/full-scorecard':"Batting Powerplay"
+
+             },
              'The Travelling Bankers':{
                  "https://www.espncricinfo.com/series/ipl-2025-1449924/kolkata-knight-riders-vs-lucknow-super-giants-21st-match-1473456/full-scorecard":"Batting Powerplay"
              }
