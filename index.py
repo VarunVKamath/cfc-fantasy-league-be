@@ -85,7 +85,9 @@ boosters = {'Gujju Gang':{},
              'Hilarious Hooligans':{},
              'Tormented Titans':{},
              'La Furia Roja':{},
-             'Supa Jinx Strikas':{},
+             'Supa Jinx Strikas':{
+                 'https://www.espncricinfo.com/series/ipl-2025-1449924/mumbai-indians-vs-sunrisers-hyderabad-33rd-match-1473470/full-scorecard':"Batting Powerplay"
+             },
              'Raging Raptors':{
                  'https://www.espncricinfo.com/series/ipl-2025-1449924/delhi-capitals-vs-rajasthan-royals-32nd-match-1473469/full-scorecard':"Batting Powerplay"
 
