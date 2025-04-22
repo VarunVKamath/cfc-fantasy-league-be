@@ -17,6 +17,7 @@ entire_team_details = {
 
         "captain": "Varun Chakaravarthy",
         "vice_captain": "Travis Head",
+        "trump": 'Prasidh Krishna',
         "team_color": "#995C00",
         "team_owner": "Nisarg",
         "injured": ['Lockie Ferguson']
@@ -26,6 +27,7 @@ entire_team_details = {
 
         "captain": "Yashasvi Jaiswal",
         "vice_captain": "Axar Patel",
+        "trump": 'Hardik Pandya',
         "team_color": "#FFFF00",
         "team_owner": "Karam"
     },
@@ -34,6 +36,7 @@ entire_team_details = {
 
         "captain": "Virat Kohli",
         "vice_captain": "Suryakumar Yadav",
+        "trump": 'Kuldeep Yadav',
         "team_color": "#FFA500",
         "team_owner": "Aryan"
     },
@@ -43,6 +46,7 @@ entire_team_details = {
           
         "captain": "Shreyas Iyer",
         "vice_captain": "Sai Sudharsan",
+        "trump": 'Phil Salt',
         "team_color": "#FF0000",
         "team_owner": "Abhinav",
         "injured": ['Adam Zampa']
@@ -55,6 +59,7 @@ entire_team_details = {
         "captain": "Shubman Gill",
         # "vice_captain": "Ruturaj Gaikwad",
         "vice_captain": "Ayush Mhatre",
+        "trump": 'Sai Kishore',
         "team_color": "#0000FF",
         "team_owner": "Varun",
         "injured": ["Ruturaj Gaikwad",'Glenn Phillips']
@@ -65,6 +70,7 @@ entire_team_details = {
 
         "captain": "KL Rahul",
         "vice_captain": "Venkatesh Iyer",
+        "trump": 'Mitchell Starc',
         "team_color": "#008000",
         "team_owner": "Aditya",
         "injured": ["Mohsin Khan"],
@@ -74,6 +80,7 @@ entire_team_details = {
         "players": ['Sunil Narine','Andre Russell','Harshal Patel','Umran Malik','Chetan Sakariya','T Natarajan','Ajinkya Rahane','Shreyas Gopal','Tilak Varma','Vijay Shankar','Shubham Dubey','Anukul Roy','Deepak Hooda','Rahul Tripathi','Lungi Ngidi','Matheesha Pathirana','Vaibhav Arora','Nicholas Pooran','Jake Fraser-McGurk','Sam Curran','Rohit Sharma','Mujeeb Ur Rahman','Anshul Kamboj','Mahipal Lomror'],
         "captain": "Sunil Narine",
         "vice_captain": "Andre Russell",
+        "trump": 'Nicholas Pooran',
         "injured": ["Umran Malik"],
         # "replacements": ["Chetan Sakariya"],
         "team_color": "#800080",
@@ -81,24 +88,20 @@ entire_team_details = {
     }
 }
 
-boosters = {'Gujju Gang':{},
+boosters = {'Gujju Gang':{'https://www.espncricinfo.com/series/ipl-2025-1449924/kolkata-knight-riders-vs-gujarat-titans-39th-match-1473476/full-scorecard':"Double Power"},
              'Hilarious Hooligans':{},
              'Tormented Titans':{},
              'La Furia Roja':{},
-             'Supa Jinx Strikas':{
-                 'https://www.espncricinfo.com/series/ipl-2025-1449924/mumbai-indians-vs-sunrisers-hyderabad-33rd-match-1473470/full-scorecard':"Batting Powerplay"
-             },
+             'Supa Jinx Strikas':{'https://www.espncricinfo.com/series/ipl-2025-1449924/mumbai-indians-vs-sunrisers-hyderabad-33rd-match-1473470/full-scorecard':'Batting Powerplay'},
              'Raging Raptors':{
-                 'https://www.espncricinfo.com/series/ipl-2025-1449924/delhi-capitals-vs-rajasthan-royals-32nd-match-1473469/full-scorecard':"Batting Powerplay"
-
-             },
-             'The Travelling Bankers':{
-                 "https://www.espncricinfo.com/series/ipl-2025-1449924/kolkata-knight-riders-vs-lucknow-super-giants-21st-match-1473456/full-scorecard":"Batting Powerplay"
-             }
+                 'https://www.espncricinfo.com/series/ipl-2025-1449924/lucknow-super-giants-vs-delhi-capitals-40th-match-1473477/full-scorecard':"Double Power",
+                 'https://www.espncricinfo.com/series/ipl-2025-1449924/delhi-capitals-vs-rajasthan-royals-32nd-match-1473469/full-scorecard':'Batting Powerplay'},
+             'The Travelling Bankers':{"https://www.espncricinfo.com/series/ipl-2025-1449924/kolkata-knight-riders-vs-lucknow-super-giants-21st-match-1473456/full-scorecard":"Batting Powerplay"}
              }
 
 
-booster_types = ["Triple Power", "Double Power", "Batting Powerplay", "Bowling Powerplay", "Triple Captain"]
+
+booster_types = ["Double Power", "Batting Powerplay", "Bowling Powerplay", "Triple Captain"]
 
 # Team short forms (for abbreviation)
 team_aliases = {
